@@ -3,7 +3,6 @@ require('./db/db')
 const express = require('express')
 const app = express()
 const cors = require('cors')
-require('./db/db')
 const PORT = 9000
 
 const wishlistController = require('./controllers/wishlist')
