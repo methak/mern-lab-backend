@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const wishlistSchema = mongoose.Schema({
+const wishListSchema = mongoose.Schema({
     name: { type: String, required: true },
     recipient: String,
     occation: String,
@@ -11,4 +11,4 @@ const wishlistSchema = mongoose.Schema({
 
 }, { timestamps: true })
 
-module.exports = mongoose.model('Wishlist', wishlistSchema)
+module.exports = mongoose.model('WishList', wishListSchema)
