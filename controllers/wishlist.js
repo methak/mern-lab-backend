@@ -11,10 +11,10 @@ router.get('/', async (req, res) => {
   }
 })
 
-router.get('/:id', async (res, req) => {
+router.get('/:id', async (req, res) => {
   try {
     const foundWishList = await WishList.findById(req.params.id);
-    res.status(200).json({ message: req.params.id })
+    res.status(200).json(foundWishList)
   } catch (error) {
     console.log(error)
   }
