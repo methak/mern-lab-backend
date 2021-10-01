@@ -2,11 +2,11 @@ const mongoose = require('mongoose');
 
 const wishListSchema = mongoose.Schema({
     name: { type: String, required: true },
-    recipient: String,
-    occation: String,
-    price: Number,
-    link: String,
-    img: String,
+    recipient: {type: String},
+    occation: {type: String},
+    price: {type: Number},
+    link: {type: String},
+    img: {String},
     isbought: { type: Boolean, default: false }
 
 }, { timestamps: true })
