@@ -31,7 +31,7 @@ router.post('/', async (req, res) => {
 
 router.delete('/:id', async (req, res) => {
   try {
-    const deletedWishList = await WishList.findByIDAndRemove(req.params.id)
+    const deletedWishList = await WishList.findByIdAndRemove(req.params.id)
     res.status(200).json(deletedWishList)
   } catch (error) {
     console.log(error)
@@ -40,7 +40,7 @@ router.delete('/:id', async (req, res) => {
 
 router.put('/:id', async (req, res) => {
   try {
-    const updatedWishList = await WishList.findbyIdAndUpdate(req.params.id, req.body, {new:true})
+    const updatedWishList = await WishList.findByIdAndUpdate(req.params.id, req.body, {new:true})
     res.status(200).json(updatedWishList)
   } catch (error) {
     console.log(error)
