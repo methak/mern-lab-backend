@@ -7,8 +7,8 @@ const cors = require('cors')
 const PORT = process.env.PORT || 9000
 
 const wishlistController = require('./controllers/wishlist')
-// const whiteList = ["http://138.197.235.123:3000"]
-const whiteList = ["https://wishlist-mern.surge.sh:3000"]
+
+const whiteList =["http://localhost:3000", "https://shrouded-river-09782.herokuapp.com/", "https://wishlist-mern.surge.sh"]
 const corsOptions = {
   origin: (origin, callback) => {
     if(whiteList.indexOf(origin) !== -1 || !origin ){
